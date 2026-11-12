@@ -1,0 +1,281 @@
+{
+  "scope": "Selected successful demonstrations, distinct from aggregate inference benchmarks.",
+  "realRobot": [
+    {
+      "id": "featured-rm1",
+      "phase": "Visible motion to stable placement",
+      "baselineSeconds": 88.45343333300116,
+      "salvageSeconds": 57.09716666700115,
+      "speedup": 1.5491737768508593,
+      "displayRate": 4,
+      "boundary": "First sustained task-directed motion to visually stable placement with open gripper.",
+      "sourceFrames": {
+        "base": [
+          80,
+          2286
+        ],
+        "salvage": [
+          45,
+          1469
+        ]
+      }
+    },
+    {
+      "id": "featured-rm2",
+      "phase": "Visible motion to stable two-block stack",
+      "baselineSeconds": 192.06853333300387,
+      "salvageSeconds": 149.3993000000046,
+      "speedup": 1.2856053096165643,
+      "displayRate": 6,
+      "boundary": "First sustained task-directed motion to stable final ordered stack with open gripper.",
+      "sourceFrames": {
+        "base": [
+          110,
+          4900
+        ],
+        "salvage": [
+          90,
+          3812
+        ]
+      }
+    },
+    {
+      "id": "real-stage-1",
+      "phase": "Approach, grasp and lift",
+      "baselineSeconds": 55.33266666700001,
+      "salvageSeconds": 39.49339999999938,
+      "speedup": 1.4010611055771567,
+      "displayRate": 4,
+      "boundary": "First sustained directed motion to visible target lift above the table.",
+      "sourceFrames": {
+        "base": [
+          80,
+          1460
+        ],
+        "salvage": [
+          45,
+          1030
+        ]
+      }
+    },
+    {
+      "id": "real-stage-2",
+      "phase": "Transfer, place and release",
+      "baselineSeconds": 33.120766666001145,
+      "salvageSeconds": 17.603766667001764,
+      "speedup": 1.8814590816001882,
+      "displayRate": 4,
+      "boundary": "Visible lifted target to stable placement with open gripper.",
+      "sourceFrames": {
+        "base": [
+          1460,
+          2286
+        ],
+        "salvage": [
+          1030,
+          1469
+        ]
+      }
+    },
+    {
+      "id": "real-stage-3",
+      "phase": "Leave the first placement, grasp and lift the light block",
+      "baselineSeconds": 36.490200000000186,
+      "salvageSeconds": 31.676299999991897,
+      "speedup": 1.1519716633574477,
+      "displayRate": 4,
+      "boundary": "Stable first placement to acquisition of the light block and transition to transfer.",
+      "sourceFrames": {
+        "base": [
+          2120,
+          3030
+        ],
+        "salvage": [
+          1990,
+          2780
+        ]
+      }
+    },
+    {
+      "id": "real-stage-4",
+      "phase": "Transfer the light block, stack and release",
+      "baselineSeconds": 74.97950000000128,
+      "salvageSeconds": 41.541933333006455,
+      "speedup": 1.8049111821290118,
+      "displayRate": 4,
+      "boundary": "Visible lifted light block to stable ordered stack with open gripper.",
+      "sourceFrames": {
+        "base": [
+          3030,
+          4900
+        ],
+        "salvage": [
+          2780,
+          3812
+        ]
+      }
+    }
+  ],
+  "simulation": [
+    {
+      "id": "sim-01",
+      "task": "libero_object/task7",
+      "episode": "task7_trial3",
+      "benchmark": "LIBERO",
+      "model": "Fast-WAM",
+      "successPair": true,
+      "timing": "Approximate reconstruction from cumulative evaluation logs, including inference and simulation. Initialization and video export excluded.",
+      "frameMapping": "Interpolated between sparse cumulative log anchors; no exact frame timestamps.",
+      "baselineSeconds": 9.620253,
+      "salvageSeconds": 4.637769,
+      "speedup": 2.07,
+      "displayRate": 1,
+      "initialSettle": "30 steps have no saved images; first saved frame held.",
+      "endpoint": "Final success action is timed; final saved pre-action frame held at end."
+    },
+    {
+      "id": "sim-02",
+      "task": "libero_object/task8",
+      "episode": "task8_trial29",
+      "benchmark": "LIBERO",
+      "model": "Fast-WAM",
+      "successPair": true,
+      "timing": "Approximate reconstruction from cumulative evaluation logs, including inference and simulation. Initialization and video export excluded.",
+      "frameMapping": "Interpolated between sparse cumulative log anchors; no exact frame timestamps.",
+      "baselineSeconds": 10.095012,
+      "salvageSeconds": 6.163164,
+      "speedup": 1.64,
+      "displayRate": 1,
+      "initialSettle": "30 steps have no saved images; first saved frame held.",
+      "endpoint": "Final success action is timed; final saved pre-action frame held at end."
+    },
+    {
+      "id": "sim-03",
+      "task": "pick_dual_bottles",
+      "episode": 4,
+      "benchmark": "RoboTwin 2.0",
+      "model": "ImageWAM",
+      "successPair": true,
+      "sourceReplayFPS": [
+        40.0,
+        40.0
+      ],
+      "displayFPS": 40,
+      "sourceFrameCounts": [
+        476,
+        412
+      ],
+      "sourceDurationsSeconds": [
+        11.9,
+        10.3
+      ],
+      "displayInterpolation": true,
+      "userSuppliedInterpolation": true,
+      "additionalInterpolation": false,
+      "timing": "User-supplied smoothed observation videos replayed at a common 1× clock. Model waits are not verified; these replay durations do not establish end-to-end speedups."
+    },
+    {
+      "id": "sim-04",
+      "task": "handover_block",
+      "episode": 22,
+      "benchmark": "RoboTwin 2.0",
+      "model": "ImageWAM",
+      "successPair": true,
+      "sourceReplayFPS": [
+        39.899328859060404,
+        39.881889763779526
+      ],
+      "displayFPS": 40,
+      "sourceFrameCounts": [
+        1189,
+        1013
+      ],
+      "sourceDurationsSeconds": [
+        29.8,
+        25.400000000000002
+      ],
+      "displayInterpolation": true,
+      "userSuppliedInterpolation": true,
+      "additionalInterpolation": false,
+      "timing": "User-supplied smoothed observation videos replayed at a common 1× clock. Model waits are not verified; these replay durations do not establish end-to-end speedups."
+    }
+  ],
+  "failures": [
+    {
+      "id": "failure-real-01",
+      "model": "π0.5 · RealMan ECO65",
+      "benchmark": "Real robot",
+      "outcome": "Both full inference and SALVAGE fail.",
+      "observedFailure": "Both policies select the light box first despite the dark-first instruction.",
+      "playback": "Common 4× original camera time; earlier-ended phase freezes. No failure-time speedup asserted.",
+      "interpretation": "The displayed failure mode is shared with the same-checkpoint full-inference base policy."
+    },
+    {
+      "id": "failure-real-02",
+      "model": "π0.5 · RealMan ECO65",
+      "benchmark": "Real robot",
+      "outcome": "Both full inference and SALVAGE fail.",
+      "observedFailure": "Both policies complete the first three stages but fail at the final stack.",
+      "playback": "Common 4× original camera time; earlier-ended phase freezes. No failure-time speedup asserted.",
+      "interpretation": "The displayed failure mode is shared with the same-checkpoint full-inference base policy."
+    }
+  ],
+  "presentation": {
+    "progress": "Shared HTML bars show selected clip/replay progress, not percentage task success: two bars for pairs and one for each synchronized composition clip.",
+    "simulation": "The selected LIBERO comparisons use recorded source images without generated motion or cross-frame blending; the rollout clocks are approximate log reconstructions.",
+    "originalTable": "Complete original Table 1 precedes ordinary simulation and real-robot comparisons. Original Table 5 and four synchronized C³ache clips follow the real-robot videos. Both tables retain the manuscript typography, captions and values."
+  },
+  "accelerationComparisons": {
+    "actionVideos": [
+      {
+        "id": "composition-full-inference",
+        "method": "Full inference",
+        "approximateRolloutSeconds": 10.095012,
+        "episodeRolloutSpeedup": 1.0,
+        "displayDurationSeconds": 11.12,
+        "staticPaperResultFrames": 0
+      },
+      {
+        "id": "composition-salvage",
+        "method": "SALVAGE",
+        "approximateRolloutSeconds": 6.163164,
+        "episodeRolloutSpeedup": 1.637959333874614,
+        "displayDurationSeconds": 11.12,
+        "staticPaperResultFrames": 0
+      },
+      {
+        "id": "composition-c3ache",
+        "method": "C³ache",
+        "approximateRolloutSeconds": 7.128056361375881,
+        "episodeRolloutSpeedup": 1.4162362765116279,
+        "displayDurationSeconds": 11.12,
+        "staticPaperResultFrames": 0
+      },
+      {
+        "id": "composition-salvage-c3ache",
+        "method": "SALVAGE + C³ache",
+        "approximateRolloutSeconds": 5.349412492269635,
+        "episodeRolloutSpeedup": 1.8871253646242776,
+        "displayDurationSeconds": 11.12,
+        "staticPaperResultFrames": 0
+      }
+    ],
+    "synchronization": "Four videos share a common 1× approximate rollout clock; play, pause, seek and loop are linked.",
+    "composition": {
+      "LIBERO": 3.18,
+      "RoboTwin": 3.26,
+      "metric": "Aggregate model-inference speedup relative to full inference.",
+      "robotwinCombinationRolloutVideoAvailable": false
+    },
+    "originalPaperComparisons": [
+      {
+        "id": "composition",
+        "target": "composition-table",
+        "kind": "table",
+        "title": "Original Table 5: C³ache composition on LIBERO and RoboTwin, relative to full inference.",
+        "image": "assets/composition-original-table.svg",
+        "pdf": "assets/composition-original-table.pdf"
+      }
+    ]
+  }
+}
