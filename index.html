@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SALVAGE: adaptive inference for world action models and vision-language-action models.">
+  <title>SALVAGE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main class="container">
+  <header class="paper-header">
+    <h1 id="project-title">The Next Plan Is Already Halfway There:<br>Adaptive Inference with SALVAGE</h1>
+    <div class="authors" id="authors" aria-label="Authors"></div>
+    <div class="affiliations" id="affiliations" aria-label="Author affiliations"></div>
+    <div class="author-notes" id="author-notes" aria-label="Author notes"></div>
+  </header>
+  <div class="teaser" id="teaser">
+    <div class="video-grid" id="featured-videos"></div>
+    <p class="paper-link"><a href="assets/SALVAGE.pdf">Paper</a></p>
+  </div>
+  <section aria-labelledby="abstract-title">
+    <h2 id="abstract-title">Abstract</h2>
+    <div id="abstract"></div>
+  </section>
+  <section aria-labelledby="approach-title">
+    <h2 id="approach-title">Approach</h2>
+    <img class="method-image" src="assets/method.png" alt="SALVAGE uses execution feedback to select action reuse, few-step inference or full inference." loading="lazy">
+  </section>
+  <section aria-labelledby="comparison-title">
+    <h2 id="comparison-title">Comparison to full inference</h2>
+    <figure class="original-table">
+      <a href="assets/libero-original-table.pdf" aria-label="Open the original Table 1 from the paper">
+        <img src="assets/libero-original-table.svg" alt="Original Table 1 from the paper: seven models, baseline and SALVAGE results across the four LIBERO suites, average success rate and inference speedup." loading="lazy">
+      </a>
+    </figure>
+  </section>
+  <section aria-labelledby="visual-title">
+    <h2 id="visual-title">Visual Results</h2>
+    <h3>LIBERO · Fast-WAM</h3>
+    <div class="video-grid balanced-grid" id="libero-videos"></div>
+    <h3>RoboTwin</h3>
+    <div class="video-grid" id="robotwin-videos"></div>
+    <h3>Real robot</h3>
+    <div class="video-grid" id="real-videos"></div>
+  </section>
+  <section aria-labelledby="acceleration-title">
+    <h2 id="acceleration-title">Composition with C³ache</h2>
+    <div id="composition-table"></div>
+    <p class="timing-note" id="composition-timing-note">Table speedups aggregate model inference across trials; video speedups use approximate single-episode rollout times, so simulation, rendering and control overhead dilute the inference gain.</p>
+    <div class="video-grid composition-grid" id="composition-videos" aria-label="Four synchronized LIBERO methods" aria-describedby="composition-timing-note"></div>
+  </section>
+  <section aria-labelledby="failure-title">
+    <h2 id="failure-title">Failure cases</h2>
+    <p class="failure-summary">These examples reflect <strong>base-policy limitations</strong>: the same failure modes occur under full inference, rather than being introduced by SALVAGE.</p>
+    <div class="video-grid failure-grid" id="failure-videos"></div>
+  </section>
+  <section aria-labelledby="citation-title">
+    <h2 id="citation-title">BibTeX</h2>
+    <pre><code id="citation-code"></code></pre>
+  </section>
+</main>
+</body>
+</html>
