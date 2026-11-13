@@ -1,0 +1,22 @@
+.decision-layout { display: grid; grid-template-columns: 1.12fr 1fr; align-items: start; gap: 28px; margin: 24px 0 30px; }
+.decision-example figcaption { font-size: 17px; margin: 0 0 14px; }
+#salvage-decision { width: 100%; aspect-ratio: 930 / 550; }
+#salvage-decision svg { display: block; width: 100%; height: auto; overflow: visible; font-family: Arial, Helvetica, sans-serif; }
+#salvage-decision text { fill: #171717; font-size: 26px; }
+#salvage-decision .decision-heavy { font-weight: 700; }
+#salvage-decision .decision-budget { fill: #777; }
+.decision-results img { display: block; width: 100%; height: auto; }
+.decision-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 34px; margin: 10px 6px 0; color: #626262; font-size: 13px; }
+.decision-controls > div { display: flex; gap: 14px; }
+.decision-controls button { border: 0; border-bottom: 1px solid #c7c7c7; border-radius: 0; padding: 2px 0; color: #666; background: none; font: inherit; cursor: pointer; }
+.decision-controls button:hover { color: #800084; border-color: #800084; }
+.decision-controls button:focus-visible { outline: 2px solid #800084; outline-offset: 4px; }
+.decision-controls button:disabled { opacity: .45; cursor: default; }
+@media (max-width: 991px) {
+  .decision-layout { grid-template-columns: 1fr; gap: 32px; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .decision-results { max-width: 650px; width: 100%; margin: 0 auto; }
+}
+@media (max-width: 520px) {
+  .decision-example figcaption { font-size: 16px; }
+  .decision-controls { font-size: 12px; }
+}
