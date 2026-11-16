@@ -31,7 +31,6 @@
       <a href="assets/intro.pdf" aria-label="Open Figure 1 from the paper">
         <img src="assets/intro.svg?v=20261116" alt="Original Figure 1 from the paper: execution-guided inference and LIBERO success rates and inference speedups across seven models.">
       </a>
-      <figcaption>SALVAGE uses execution feedback to select action reuse, few-step inference, or full inference. Reuse makes no model call; few-step and full inference use k and K sampling steps, respectively, with k &lt; K. The LIBERO results use Table 1. On Fast-WAM, SALVAGE achieves 2.55× inference speedup with average success changing from 95.35% to 95.00% on the matched A800 evaluation.</figcaption>
     </figure>
   </section>
   <section aria-labelledby="comparison-title">
@@ -54,7 +53,6 @@
   <section aria-labelledby="acceleration-title">
     <h2 id="acceleration-title">Composition with C³ache</h2>
     <div id="composition-table"></div>
-    <p class="timing-note" id="composition-timing-note">Table speedups aggregate model inference across trials; video speedups use approximate single-episode rollout times, so simulation, rendering and control overhead dilute the inference gain.</p>
     <div class="video-grid composition-grid" id="composition-videos" aria-label="Four synchronized LIBERO methods" aria-describedby="composition-timing-note"></div>
   </section>
   <section aria-labelledby="failure-title">
