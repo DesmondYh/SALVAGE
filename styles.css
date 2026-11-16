@@ -52,6 +52,9 @@ h3 { font-size: 20px; margin: 26px 0 12px; text-align: center; }
 .original-table { margin: 18px 0 26px; overflow-x: auto; }
 .original-table a { display: block; min-width: 740px; }
 .original-table img { display: block; width: 100%; height: auto; }
+.overview-figure { overflow: visible; }
+.overview-figure a { min-width: 0; }
+.overview-figure figcaption { margin: 12px 0 0; color: #666; font-size: 13px; line-height: 1.6; text-align: left; }
 pre { display: block; padding: 10px; margin: 0 0 10px; font: 13px/1.42857143 Menlo, Monaco, Consolas, "Courier New", monospace; color: #333; background: #f5f5f5; border: 1px solid #ccc; border-radius: 4px; white-space: pre-wrap; overflow-wrap: anywhere; }
 @media (min-width: 768px) { .container { width: 750px; } }
 @media (min-width: 992px) { .container { width: 970px; } }

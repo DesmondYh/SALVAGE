@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="SALVAGE: adaptive inference for world action models and vision-language-action models.">
   <title>SALVAGE</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="decision.css?v=2">
-  <script src="data.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261116">
+  <script src="data.js?v=20261116" defer></script>
   <script src="app.js" defer></script>
-  <script src="decision.js?v=2" defer></script>
 </head>
 <body>
 <main class="container">
@@ -21,7 +19,7 @@
   </header>
   <div class="teaser" id="teaser">
     <div class="video-grid" id="featured-videos"></div>
-    <p class="paper-link"><a href="assets/SALVAGE.pdf?v=20261113">Paper</a></p>
+    <p class="paper-link"><a href="assets/SALVAGE.pdf?v=20261116">Paper</a></p>
   </div>
   <section aria-labelledby="abstract-title">
     <h2 id="abstract-title">Abstract</h2>
@@ -29,28 +27,18 @@
   </section>
   <section aria-labelledby="approach-title">
     <h2 id="approach-title">How SALVAGE Works</h2>
-    <div class="decision-layout">
-      <figure class="decision-example">
-        <figcaption>(a) Execution-guided inference</figcaption>
-        <div id="salvage-decision" aria-label="An illustrative SALVAGE decision"></div>
-        <div class="decision-controls">
-          <span id="decision-stage" aria-live="polite">Execute a prefix</span>
-          <div>
-            <button type="button" id="decision-pause" aria-label="Pause decision animation">Pause</button>
-            <button type="button" id="decision-replay" aria-label="Replay one SALVAGE decision">Replay</button>
-          </div>
-        </div>
-      </figure>
-      <figure class="decision-results">
-        <img src="assets/fig1-results.svg?v=1" alt="Original Figure 1b: LIBERO success rates and inference speedups across seven models. The chart is independent of the illustrative animation.">
-      </figure>
-    </div>
+    <figure class="original-table overview-figure">
+      <a href="assets/intro.pdf" aria-label="Open Figure 1 from the paper">
+        <img src="assets/intro.svg?v=20261116" alt="Original Figure 1 from the paper: execution-guided inference and LIBERO success rates and inference speedups across seven models.">
+      </a>
+      <figcaption>SALVAGE uses execution feedback to select action reuse, few-step inference, or full inference. Reuse makes no model call; few-step and full inference use k and K sampling steps, respectively, with k &lt; K. The LIBERO results use Table 1. On Fast-WAM, SALVAGE achieves 2.55× inference speedup with average success changing from 95.35% to 95.00% on the matched A800 evaluation.</figcaption>
+    </figure>
   </section>
   <section aria-labelledby="comparison-title">
     <h2 id="comparison-title">Comparison to full inference</h2>
     <figure class="original-table">
       <a href="assets/libero-original-table.pdf" aria-label="Open the original Table 1 from the paper">
-        <img src="assets/libero-original-table.svg" alt="Original Table 1 from the paper: seven models, baseline and SALVAGE results across the four LIBERO suites, average success rate and inference speedup." loading="lazy">
+        <img src="assets/libero-original-table.svg?v=20261116" alt="Original Table 1 from the paper: seven models, baseline and SALVAGE results across the four LIBERO suites, average success rate and inference speedup." loading="lazy">
       </a>
     </figure>
   </section>

@@ -79,7 +79,7 @@
       "text": "Corresponding author"
     }
   ],
-  "abstract": "World action models (WAMs) and vision-language-action (VLA) models predict action chunks but execute only part before replanning. They discard the remaining actions despite their potential usefulness and recompute a new chunk. This raises a question: how much new inference is actually needed? We introduce SALVAGE, a training-free framework that adapts inference using execution feedback. At each replan, SALVAGE selects action reuse, few-step inference, or full inference using displacement error. Interfaces with uninformative motion feedback instead use absolute frame difference. Simulation thresholds are calibrated in one pass per model and suite. Phase overrides and a consecutive-reuse limit constrain cheaper inference. Our results show that SALVAGE substantially accelerates inference while largely preserving task performance. In the seven-model LIBERO evaluation, SALVAGE achieves up to a 2.30× inference speedup, with five models staying within one percentage point of their average full-inference success rates. It also achieves a 2.15× speedup on RoboTwin 2.0 and 1.28–1.58× speedups across four real-robot tasks on the SO-100 and RealMan ECO65 arms. Combining SALVAGE with C³ache further increases the speedup on RoboTwin 2.0 to 3.26×. Our analysis identifies few-step inference as the main source of savings, with execution feedback guiding the choice of computation level.",
+  "abstract": "World action models (WAMs) and vision-language-action (VLA) models predict action chunks but execute only part before replanning. They discard the remaining actions despite their potential usefulness and recompute a new chunk. This raises a question: how much new inference is actually needed? We introduce SALVAGE, a training-free framework that adapts inference using execution feedback. At each replan, SALVAGE selects action reuse, few-step inference, or full inference using displacement error. Interfaces with uninformative motion feedback instead use absolute frame difference. Simulation thresholds are calibrated in one pass per model and suite. Phase overrides and a consecutive-reuse limit constrain cheaper inference. Our results show that SALVAGE substantially accelerates inference while largely preserving task performance. In the seven-model LIBERO evaluation, SALVAGE achieves up to a 2.55× inference speedup, with six models staying within one percentage point of their average full-inference success rates. It also achieves a 2.15× speedup on RoboTwin 2.0 and 1.28–1.58× speedups across four real-robot tasks on the SO-100 and RealMan ECO65 arms. Combining SALVAGE with C³ache further increases the speedup on RoboTwin 2.0 to 3.26×. Our analysis identifies few-step inference as the main source of savings, with execution feedback guiding the choice of computation level.",
   "featured": [
     {
       "id": "featured-rm1",
@@ -470,8 +470,8 @@
       "target": "composition-table",
       "kind": "table",
       "title": "Original Table 5: C³ache composition on LIBERO and RoboTwin, relative to full inference.",
-      "image": "assets/composition-original-table.svg",
-      "pdf": "assets/composition-original-table.pdf"
+      "image": "assets/composition-original-table.svg?v=20261116",
+      "pdf": "assets/composition-original-table.pdf?v=20261116"
     }
   ],
   "citation": "@misc{yang_salvage,\n  title = {The Next Plan Is Already Halfway There: Adaptive Inference with SALVAGE},\n  author = {Yang, He and Hou, Yuxuan and Zhang, Jianrong and Deng, Weijian and Wang, Zhihua and Fan, Hehe},\n  note = {Research manuscript}\n}"
